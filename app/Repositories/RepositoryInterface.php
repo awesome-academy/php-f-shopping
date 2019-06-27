@@ -78,7 +78,7 @@ interface RepositoryInterface
      * @param string $tableName
      * @param array  $whereData
      */
-    public function findByMultiConditions($tableName, $whereData = array());
+    public function findByMultiConditions($tableName, $whereData = []);
 
     /**
      * paging With Multi Conditions
@@ -88,7 +88,7 @@ interface RepositoryInterface
      * @param integer $perPage
      * @param array   $columns
      */
-    public function pagingWithMultiConditions($tableName, $whereData = array(), $perPage = 15, $columns = array('*'));
+    public function pagingWithMultiConditions($tableName, $whereData = [], $perPage = 15, $columns = array('*'));
 
     /**
      * del By Multi Conditions
@@ -96,5 +96,5 @@ interface RepositoryInterface
      * @param string $tableName
      * @param array  $whereData
      */
-    public function delByMultiConditions($tableName, $whereData = array());
+    public function delByMultiConditions($tableName, $whereData = []);
 }

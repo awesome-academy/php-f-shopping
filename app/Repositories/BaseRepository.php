@@ -72,7 +72,7 @@ abstract class BaseRepository implements RepositoryInterface
      * @param  string $attribute Attribute
      * @return void
      */
-    public function update(array $data, $id, $attribute = "id")
+    public function update(array $data, $id, $attribute = 'id')
     {
          return $this->model->where($attribute, '=', $id)->update($data);
     }
@@ -83,7 +83,7 @@ abstract class BaseRepository implements RepositoryInterface
      * @param  string     $attribute Attribute
      * @return void
      */
-    public function update_role(array $data, $role_id, $attribute = "role_id")
+    public function updateRole(array $data, $role_id, $attribute = 'role_id')
     {
          return $this->model->where($attribute, '=', $role_id)->update($data);
     }
@@ -249,7 +249,6 @@ abstract class BaseRepository implements RepositoryInterface
 
     public function getManyWhereOrder($whereData = [], $select = ['*'], $orderBy = 'id asc')
     {
-
         return $this->model
             ->where($whereData)
             ->select($select)
@@ -259,7 +258,6 @@ abstract class BaseRepository implements RepositoryInterface
 
     public function getManyWhereOrderLimitNumber($whereData = [], $limit = 5, $select = ['*'], $orderBy = 'id desc')
     {
-
         return $this->model
             ->where($whereData)
             ->select($select)
@@ -269,7 +267,6 @@ abstract class BaseRepository implements RepositoryInterface
     }
     public function getManyWhereOrderLimit($whereData = [], $select = ['*'], $orderBy = 'id desc')
     {
-
         return $this->model
             ->where($whereData)
             ->select($select)
@@ -288,7 +285,7 @@ abstract class BaseRepository implements RepositoryInterface
     {
         return $this->model
             ->select($select)
-            ->whereRaw("find_in_set(" . $columnSearch . ", '" . $stringList . "')")
+            ->whereRaw('find_in_set(' . $columnSearch . ', "' . $stringList . '")')
             ->get();
     }
 
@@ -299,7 +296,7 @@ abstract class BaseRepository implements RepositoryInterface
             ->select($select)
             ->distinct()
             ->where($whereData)
-            ->whereRaw("find_in_set(" . $columnSearch . ", '" . $stringList . "')")
+            ->whereRaw('find_in_set(' . $columnSearch . ', "' . $stringList . '")')
             ->get();
     }
     
@@ -310,7 +307,7 @@ abstract class BaseRepository implements RepositoryInterface
             ->delete();
     }
     
-    public function findByMultiConditionsModelLimit($whereData = [], $orderBy = "id asc")
+    public function findByMultiConditionsModelLimit($whereData = [], $orderBy = 'id asc')
     {
         return $this->model
             ->where($whereData)

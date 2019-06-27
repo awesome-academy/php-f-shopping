@@ -14,3 +14,4 @@ class Customer extends Authenticatable
     protected $guarded = [];
 }
 
+
