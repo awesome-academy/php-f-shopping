@@ -78,17 +78,6 @@ abstract class BaseRepository implements RepositoryInterface
     }
 
     /**
-     * @param  array      $data      Array data
-     * @param  $id ROLE_ID
-     * @param  string     $attribute Attribute
-     * @return void
-     */
-    public function updateRole(array $data, $role_id, $attribute = 'role_id')
-    {
-         return $this->model->where($attribute, '=', $role_id)->update($data);
-    }
-
-    /**
      * @param  $id ID
      * @return void
      */
@@ -173,7 +162,6 @@ abstract class BaseRepository implements RepositoryInterface
             ->delete();
     }
 
-
     /**
      * update records by multi conditions
      *
@@ -211,8 +199,6 @@ abstract class BaseRepository implements RepositoryInterface
             ->where($whereData)
             ->count();
     }
-
-
 
     /**
      * @param  array  $whereData
@@ -291,7 +277,6 @@ abstract class BaseRepository implements RepositoryInterface
 
     public function searchItemInStringListUnequi($stringList, $columnSearch, $select = ['*'], $whereData = [])
     {
-
         return $this->model
             ->select($select)
             ->distinct()

@@ -15,7 +15,7 @@ interface RepositoryInterface
      *
      * @param array $columns
      */
-    public function all($columns = array('*'));
+    public function all($columns = ['*']);
 
     /**
      * paginate data
@@ -24,7 +24,7 @@ interface RepositoryInterface
      * @param array   $columns
      */
 
-    public function paginate($perPage = 15, $columns = array('*'));
+    public function paginate($perPage = 15, $columns = ['*']);
 
     /**
      * create data
@@ -54,7 +54,7 @@ interface RepositoryInterface
      * @param integer $id
      * @param array   $columns
      */
-    public function find($id, $columns = array('*'));
+    public function find($id, $columns = ['*']);
 
     /**
      * findBy column
@@ -63,7 +63,7 @@ interface RepositoryInterface
      * @param string $value
      * @param array  $columns
      */
-    public function findBy($field, $value, $columns = array('*'));
+    public function findBy($field, $value, $columns = ['*']);
 
     /**
      * Get by id
@@ -88,7 +88,7 @@ interface RepositoryInterface
      * @param integer $perPage
      * @param array   $columns
      */
-    public function pagingWithMultiConditions($tableName, $whereData = [], $perPage = 15, $columns = array('*'));
+    public function pagingWithMultiConditions($tableName, $whereData = [], $perPage = 15, $columns = ['*']);
 
     /**
      * del By Multi Conditions
