@@ -220,9 +220,8 @@ abstract class BaseRepository implements RepositoryInterface
      * @param  array  $select
      * @return mixed
      */
-    public function getByMultiConditionsModel($whereData = [], $orderBy = "id desc", $select = array("*"))
+    public function getByMultiConditionsModel($whereData = [], $orderBy = 'id desc', $select = ['*'])
     {
-
         return $this->model
             ->select($select)
             ->where($whereData)
@@ -230,9 +229,8 @@ abstract class BaseRepository implements RepositoryInterface
             ->get();
     }
 
-    public function getByMultiConditionsPagination($tableName, $whereData = [], $select = array("*"), $orderBy = "id desc", $perpage = 10)
+    public function getByMultiConditionsPagination($tableName, $whereData = [], $select = ['*'], $orderBy = 'id desc', $perpage = 10)
     {
-
         return DB::table($tableName)
             ->select($select)
             ->where($whereData)
@@ -240,7 +238,7 @@ abstract class BaseRepository implements RepositoryInterface
             ->paginate($perpage);
     }
 
-    public function getByInConditions($tableName, $field, $data = [], $select = array("*"), $orderBy = "id desc")
+    public function getByInConditions($tableName, $field, $data = [], $select = ['*'], $orderBy = 'id desc')
     {
         return DB::table($tableName)
             ->select($select)
@@ -249,7 +247,7 @@ abstract class BaseRepository implements RepositoryInterface
             ->get();
     }
 
-    public function getManyWhereOrder($whereData = [], $select = array("*"), $orderBy = "id asc")
+    public function getManyWhereOrder($whereData = [], $select = ['*'], $orderBy = 'id asc')
     {
 
         return $this->model
@@ -259,7 +257,7 @@ abstract class BaseRepository implements RepositoryInterface
             ->get();
     }
 
-    public function getManyWhereOrderLimitNumber($whereData = [], $limit = 5, $select = array("*"), $orderBy = "id desc")
+    public function getManyWhereOrderLimitNumber($whereData = [], $limit = 5, $select = ['*'], $orderBy = 'id desc')
     {
 
         return $this->model
@@ -269,7 +267,7 @@ abstract class BaseRepository implements RepositoryInterface
             ->limit($limit)
             ->get();
     }
-    public function getManyWhereOrderLimit($whereData = [], $select = array("*"), $orderBy = "id desc")
+    public function getManyWhereOrderLimit($whereData = [], $select = ['*'], $orderBy = 'id desc')
     {
 
         return $this->model
@@ -278,7 +276,7 @@ abstract class BaseRepository implements RepositoryInterface
             ->orderByRaw($orderBy)
             ->first();
     }
-    public function getManyWhereOrderPagination($whereData = [], $select = array("*"), $orderBy = "id desc", $perpage = 10)
+    public function getManyWhereOrderPagination($whereData = [], $select = ['*'], $orderBy = 'id desc', $perpage = 10)
     {
         return $this->model
             ->where($whereData)
@@ -286,7 +284,7 @@ abstract class BaseRepository implements RepositoryInterface
             ->orderByRaw($orderBy)
             ->paginate($perpage);
     }
-    public function searchItemInStringList($stringList, $columnSearch, $select = array("*"))
+    public function searchItemInStringList($stringList, $columnSearch, $select = ['*'])
     {
         return $this->model
             ->select($select)
@@ -294,7 +292,7 @@ abstract class BaseRepository implements RepositoryInterface
             ->get();
     }
 
-    public function searchItemInStringListUnequi($stringList, $columnSearch, $select = array("*"), $whereData = [])
+    public function searchItemInStringListUnequi($stringList, $columnSearch, $select = ['*'], $whereData = [])
     {
 
         return $this->model
