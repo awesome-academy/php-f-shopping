@@ -78,5 +78,4 @@ class Constant
     * Session table
         */
     const SESSION = 'sessions';
-    
 }
