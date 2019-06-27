@@ -11,5 +11,5 @@ class Contact extends Model
 
     protected $date = ['created_at', 'updated_at'];
 
-    protected $guarded = array();
+    protected $guarded = [];
 }

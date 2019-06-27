@@ -11,5 +11,5 @@ class RolePermission extends Model
 
     public $incrementing = false;
 
-    protected $guarded = array();
+    protected $guarded = [];
 }

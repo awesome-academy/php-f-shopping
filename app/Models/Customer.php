@@ -8,9 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Customer extends Authenticatable
 {
-	use Notifiable;
-	protected $guard = 'customer';
+    use Notifiable;
+    protected $guard = 'customer';
     protected $table = 'customers';
-    protected $guarded = array();
+    protected $guarded = [];
 }
 

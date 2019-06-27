@@ -9,5 +9,5 @@ class District extends Model
 
     protected $table = 'districts';
 
-    protected $guarded = array();
+    protected $guarded = [];
 }

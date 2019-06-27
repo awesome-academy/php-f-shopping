@@ -10,5 +10,5 @@ class Recipe extends Model
     protected $table = 'recipes';
     protected $dates = ['created_at', 'updated_at'];
 
-    protected $guarded = array();
+    protected $guarded = [];
 }

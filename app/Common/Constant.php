@@ -5,77 +5,78 @@ namespace App\Common;
 class Constant
 {
     /**
-    * Category table 
+    * Category table
     */
-    const CATEGORY = "categories";
+    const CATEGORY = 'categories';
 
     /**
-    * Contact table 
+    * Contact table
     */
-    const CONTACT = "contacts";
+    const CONTACT = 'contacts';
 
     /**
-    * Customer table 
+    * Customer table
     */
-    const CUSTOMER = "customers";
+    const CUSTOMER = 'customers';
 
     /**
-    * District table 
+    * District table
     */
-    const DISTRICT = "districts";
+    const DISTRICT = 'districts';
 
     /**
-    * Orders table 
+    * Orders table
     */
-    const ORDERS = "orders";
+    const ORDERS = 'orders';
 
     /**
-    * Orders table 
+    * Orders table
     */
-    const ORDER_DETAILS = "order_details";
+    const ORDER_DETAILS = 'order_details';
 
     /**
-    * Product table 
+    * Product table
     */
-    const PRODUCT = "products";
+    const PRODUCT = 'products';
 
     /**
-    * Province table 
+    * Province table
     */
-    const PROVINCE = "provinces";
+    const PROVINCE = 'provinces';
 
     /**
-    * Recipe table 
+    * Recipe table
     */
-    const RECIPE = "recipes";
+    const RECIPE = 'recipes';
 
     /**
-    * Comment recipe table 
+    * Comment recipe table
     */
-    const COMMENT_RECIPE = "comment_recipes";
+    const COMMENT_RECIPE = 'comment_recipes';
 
     /**
-    * Role table 
+    * Role table
     */
-    const ROLE = "roles";
+    const ROLE = 'roles';
 
     /**
-    * Users table 
+    * Users table
     */
-    const USERS = "users";
+    const USERS = 'users';
 
     /**
-    * User permission 
+    * User permission
     */
-    const PERMISSION = "permissions";
+    const PERMISSION = 'permissions';
 
     /**
-    * User permission group 
+    * User permission group
     */
-    const ROLE_PERMISSION = "role_permissions";
+    const ROLE_PERMISSION = 'role_permissions';
 
     /**
-    * Session table 
+    * Session table
         */
-    const SESSION = "sessions";
+    const SESSION = 'sessions';
+    
 }

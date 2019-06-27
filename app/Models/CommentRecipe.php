@@ -10,5 +10,5 @@ class CommentRecipe extends Model
     protected $table = 'comment_recipes';
     protected $dates = ['created_at', 'updated_at'];
 
-    protected $guarded = array();
+    protected $guarded = [];
 }

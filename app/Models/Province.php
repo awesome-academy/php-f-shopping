@@ -9,5 +9,5 @@ class Province extends Model
 
     protected $table = 'provinces';
 
-    protected $guarded = array();
+    protected $guarded = [];
 }

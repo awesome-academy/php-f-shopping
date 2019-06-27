@@ -9,5 +9,5 @@ class Product extends Model
 
     protected $table = 'products';
 
-    protected $guarded = array();
+    protected $guarded = [];
 }
