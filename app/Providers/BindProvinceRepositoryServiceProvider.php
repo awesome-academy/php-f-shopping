@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Illuminate\Support\ServiceProvider;
 use App\Repositories\Province\ProvinceInterface;
 use App\Repositories\Province\ProvinceRepository;
 use App\Repositories\Province\District\DistrictInterface;

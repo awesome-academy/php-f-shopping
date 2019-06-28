@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Illuminate\Support\ServiceProvider;
 use App\Repositories\Order\OrderInterface;
 use App\Repositories\Order\OrderRepository;
 use App\Repositories\Order\OrderDetail\OrderDetailInterface;

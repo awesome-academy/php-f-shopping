@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Illuminate\Support\ServiceProvider;
 use App\Repositories\Recipe\RecipeInterface;
 use App\Repositories\Recipe\RecipeRepository;
 use App\Repositories\Recipe\CommentRecipe\CommentRecipeInterface;

@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Illuminate\Support\ServiceProvider;
 use App\Repositories\User\UserInterface;
 use App\Repositories\User\UserRepository;
 use App\Repositories\User\Permission\PermissionInterface;
