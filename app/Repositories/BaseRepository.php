@@ -135,7 +135,8 @@ abstract class BaseRepository implements RepositoryInterface
      * @param array $whereData Array where data
      * @return array Return array
      */
-    public function pagingWithMultiConditions($tableName, $whereData = [], $perPage = 15, $orderBy = 'id desc', $columns = ['*'])
+    public function pagingWithMultiConditions($tableName, $whereData = [], 
+        $perPage = 15, $orderBy = 'id desc', $columns = ['*'])
     {
         return DB::table($tableName)
             ->where($whereData)
@@ -215,9 +216,9 @@ abstract class BaseRepository implements RepositoryInterface
             ->get();
     }
 
-    public function getByMultiConditionsPagination($tableName, $whereData = [], $select = ['*'], $orderBy = 'id desc', $perpage = 10)
+    public function getByMultiConditionsPagination($tableName, $whereData = [], 
+        $select = ['*'], $orderBy = 'id desc', $perpage = 10)
     {
-
         return DB::table($tableName)
             ->select($select)
             ->where($whereData)
