@@ -6,7 +6,7 @@ use App\Models\Province;
 use App\Repositories\Province\ProvinceInterface;
 use App\Repositories\BaseRepository;
 
-class ProvinceRepository extends BaseRepositories implements ProvinceInterafce
+class ProvinceRepository extends BaseRepository implements ProvinceInterafce
 {
     public function getModel()
     {

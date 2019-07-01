@@ -6,7 +6,7 @@ use App\Models\Permission;
 use App\Repositories\User\Permission\PermissionInterface;
 use App\Repositories\BaseRepository;
 
-class PermissionRepository extends BaseRepositories implements PermissionInterafce
+class PermissionRepository extends BaseRepository implements PermissionInterafce
 {
     public function getModel()
     {

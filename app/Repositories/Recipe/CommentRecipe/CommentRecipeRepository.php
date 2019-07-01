@@ -6,7 +6,7 @@ use App\Models\CommentRecipe;
 use App\Repositories\Recipe\CommentRecipe\CommentRecipeInterface;
 use App\Repositories\BaseRepository;
 
-class CommentRecipeRepository extends BaseRepositories implements CommentRecipeInterafce
+class CommentRecipeRepository extends BaseRepository implements CommentRecipeInterafce
 {
     public function getModel()
     {

@@ -6,7 +6,7 @@ use App\Models\Category;
 use App\Repositories\Category\CategoryInterface;
 use App\Repositories\BaseRepository;
 
-class CategoryRepository extends BaseRepositories implements CategoryInterafce
+class CategoryRepository extends BaseRepository implements CategoryInterafce
 {
     public function getModel()
     {

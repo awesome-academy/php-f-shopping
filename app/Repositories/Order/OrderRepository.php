@@ -6,7 +6,7 @@ use App\Models\Order;
 use App\Repositories\Order\OrderInterface;
 use App\Repositories\BaseRepository;
 
-class OrderRepository extends BaseRepositories implements OrderInterafce
+class OrderRepository extends BaseRepository implements OrderInterafce
 {
     public function getModel()
     {
