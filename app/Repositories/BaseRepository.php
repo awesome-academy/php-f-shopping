@@ -112,8 +112,7 @@ abstract class BaseRepository implements RepositoryInterface
         return $this->model->where($attribute, '=', $value)->get($columns);
     }
 
-    public function findByReturnArrayPlug($attribute, $value, $pluck,
-        $columns = ['*'])
+    public function findByReturnArrayPlug($attribute, $value, $pluck, $columns = ['*'])
     {
         return $this->model->where($attribute, '=', $value)->get($columns)->pluck($pluck);
     }
@@ -137,8 +136,8 @@ abstract class BaseRepository implements RepositoryInterface
      * @return array Return array
      */
     public function pagingWithMultiConditions($tableName, $whereData = [],
-        $perPage = 15, $orderBy = 'id desc', $columns = ['*']) 
-    {
+        $perPage = 15, $orderBy = 'id desc', $columns = ['*']
+    ) {
         return DB::table($tableName)
             ->where($whereData)
             ->orderByRaw($orderBy)
@@ -209,8 +208,8 @@ abstract class BaseRepository implements RepositoryInterface
      * @return mixed
      */
     public function getByMultiConditionsModel($whereData = [],
-        $orderBy = 'id desc', $select = ['*'])
-    {
+        $orderBy = 'id desc', $select = ['*']
+    ) {
         return $this->model
             ->select($select)
             ->where($whereData)
@@ -219,8 +218,8 @@ abstract class BaseRepository implements RepositoryInterface
     }
 
     public function getByMultiConditionsPagination($tableName, $whereData = [],
-        $select = ['*'], $orderBy = 'id desc', $perpage = 10) 
-    {
+        $select = ['*'], $orderBy = 'id desc', $perpage = 10
+    ) {
         return DB::table($tableName)
             ->select($select)
             ->where($whereData)
@@ -230,8 +229,8 @@ abstract class BaseRepository implements RepositoryInterface
 
 
     public function getByInConditions($tableName, $field, $data = [],
-        $select = ['*'], $orderBy = 'id desc')
-    {
+        $select = ['*'], $orderBy = 'id desc'
+    ) {
         return DB::table($tableName)
             ->select($select)
             ->whereIn($field, $data)
@@ -240,8 +239,8 @@ abstract class BaseRepository implements RepositoryInterface
     }
 
     public function getManyWhereOrder($whereData = [], $select = ['*'],
-        $orderBy = 'id asc')
-    {
+        $orderBy = 'id asc'
+    ) {
         return $this->model
             ->where($whereData)
             ->select($select)
@@ -250,8 +249,8 @@ abstract class BaseRepository implements RepositoryInterface
     }
 
     public function getManyWhereOrderLimitNumber($whereData = [], $limit = 5,
-        $select = ['*'], $orderBy = 'id desc')
-    {
+        $select = ['*'], $orderBy = 'id desc'
+    ) {
         return $this->model
             ->where($whereData)
             ->select($select)
@@ -260,8 +259,8 @@ abstract class BaseRepository implements RepositoryInterface
             ->get();
     }
     public function getManyWhereOrderLimit($whereData = [], $select = ['*'],
-        $orderBy = 'id desc')
-    {
+        $orderBy = 'id desc'
+    ) {
         return $this->model
             ->where($whereData)
             ->select($select)
@@ -269,8 +268,8 @@ abstract class BaseRepository implements RepositoryInterface
             ->first();
     }
     public function getManyWhereOrderPagination($whereData = [],
-        $select = ['*'], $orderBy = 'id desc', $perpage = 10)
-    {
+        $select = ['*'], $orderBy = 'id desc', $perpage = 10
+    ) {
         return $this->model
             ->where($whereData)
             ->select($select)
@@ -278,17 +277,16 @@ abstract class BaseRepository implements RepositoryInterface
             ->paginate($perpage);
     }
     public function searchItemInStringList($stringList, $columnSearch,
-        $select = ['*'])
-    {
+        $select = ['*']
+    ) {
         return $this->model
             ->select($select)
             ->whereRaw('find_in_set(' . $columnSearch . ', "' . $stringList . '")')
             ->get();
     }
 
-    public function searchItemInStringListUnequi($stringList, $columnSearch,
-        $select = ['*'], $whereData = [])
-    {
+    public function searchItemInStringListUnequi($stringList, $columnSearch, $select = ['*'], $whereData = []
+    ) {
         return $this->model
             ->select($select)
             ->distinct()
@@ -304,8 +302,7 @@ abstract class BaseRepository implements RepositoryInterface
             ->delete();
     }
     
-    public function findByMultiConditionsModelLimit($whereData = [],
-        $orderBy = 'id asc')
+    public function findByMultiConditionsModelLimit($whereData = [], $orderBy = 'id asc')
     {
         return $this->model
             ->where($whereData)
