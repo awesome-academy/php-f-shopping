@@ -47,7 +47,8 @@ class AppServiceProvider extends ServiceProvider
             \App\Repositories\Session\SessionInterface::class,
             \App\Repositories\Session\SessionRepository::class
         );
-
+        
+        //bind repository
         $this->app->register(BindOrderRepositoryServiceProvider::class);
         $this->app->register(BindProvinceRepositoryServiceProvider::class);
         $this->app->register(BindRecipeRepositoryServiceProvider::class);
