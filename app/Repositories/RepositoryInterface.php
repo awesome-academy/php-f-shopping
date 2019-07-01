@@ -88,7 +88,7 @@ interface RepositoryInterface
      * @param integer $perPage
      * @param array   $columns
      */
-    public function pagingWithMultiConditions($tableName, $whereData = [], $perPage = 15, $columns = ['*']);
+    public function pagingWithMultiConditions($tableName, array $whereData = [], $perPage = 15, array $columns = ['*']);
 
     /**
      * del By Multi Conditions

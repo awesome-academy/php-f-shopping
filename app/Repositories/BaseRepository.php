@@ -211,8 +211,10 @@ abstract class BaseRepository implements RepositoryInterface
      * @param  array  $select
      * @return mixed
      */
-    public function getByMultiConditionsModel($whereData = [],
-        $orderBy = 'id desc', $select = ['*']
+    public function getByMultiConditionsModel(
+        array $whereData = [],
+        $orderBy = 'id desc',
+        array $select = ['*']
     ) {
         return $this->model
             ->select($select)
@@ -250,7 +252,9 @@ abstract class BaseRepository implements RepositoryInterface
             ->get();
     }
 
-    public function getManyWhereOrder($whereData = [], $select = ['*'],
+    public function getManyWhereOrder(
+        array $whereData = [],
+        array $select = ['*'],
         $orderBy = 'id asc'
     ) {
         return $this->model
@@ -296,8 +300,10 @@ abstract class BaseRepository implements RepositoryInterface
             ->orderByRaw($orderBy)
             ->paginate($perpage);
     }
-    public function searchItemInStringList($stringList, $columnSearch,
-        $select = ['*']
+    public function searchItemInStringList(
+        $stringList,
+        $columnSearch,
+        array $select = ['*']
     ) {
         return $this->model
             ->select($select)
@@ -305,8 +311,11 @@ abstract class BaseRepository implements RepositoryInterface
             ->get();
     }
 
-    public function searchItemInStringListUnequi($stringList, $columnSearch, $select = ['*'],
-        $whereData = []
+    public function searchItemInStringListUnequi(
+        $stringList,
+        $columnSearch,
+        array $select = ['*'],
+        array $whereData = []
     ) {
         return $this->model
             ->select($select)
