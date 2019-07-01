@@ -6,7 +6,7 @@ use App\Models\District;
 use App\Repositories\Province\District\DistrictInterface;
 use App\Repositories\BaseRepository;
 
-class DistrictRepository extends BaseRepository implements DistrictInterafce
+class DistrictRepository extends BaseRepository implements DistrictInterface
 {
     public function getModel()
     {

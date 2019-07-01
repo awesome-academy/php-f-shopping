@@ -6,7 +6,7 @@ use App\Models\Recipe;
 use App\Repositories\Recipe\RecipeInterface;
 use App\Repositories\BaseRepository;
 
-class RecipeRepository extends BaseRepository implements RecipeInterafce
+class RecipeRepository extends BaseRepository implements RecipeInterface
 {
     public function getModel()
     {

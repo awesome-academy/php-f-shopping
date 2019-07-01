@@ -6,7 +6,7 @@ use App\Models\Product;
 use App\Repositories\Product\ProductInterface;
 use App\Repositories\BaseRepository;
 
-class ProductRepository extends BaseRepository implements ProductInterafce
+class ProductRepository extends BaseRepository implements ProductInterface
 {
     public function getModel()
     {
