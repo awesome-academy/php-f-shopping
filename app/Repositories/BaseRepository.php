@@ -6,7 +6,7 @@ use App\Repositories\RepositoryInterface;
 
 abstract class BaseRepository implements RepositoryInterface
 {
-
+    const LIMIT = 15;
     /**
      * @var $model
      */
@@ -52,7 +52,7 @@ abstract class BaseRepository implements RepositoryInterface
      * @param  array $columns Array Columns
      * @return array Return data paginate
      */
-    public function paginate($perPage = 15, $columns = ['*'])
+    public function paginate($perPage = self::LIMIT, $columns = ['*'])
     {
         return $this->model->paginate($perPage, $columns);
     }
@@ -138,7 +138,7 @@ abstract class BaseRepository implements RepositoryInterface
     public function pagingWithMultiConditions(
         $tableName,
         array $whereData = [],
-        $perPage = 15,
+        $perPage = self::LIMIT,
         $orderBy = 'id desc',
         array $columns = ['*']
     ) {
@@ -228,7 +228,7 @@ abstract class BaseRepository implements RepositoryInterface
         array $whereData = [],
         array $select = ['*'],
         $orderBy = 'id desc',
-        $perpage = 10
+        $perpage = self::LIMIT
     ) {
         return DB::table($tableName)
             ->select($select)
@@ -292,7 +292,7 @@ abstract class BaseRepository implements RepositoryInterface
         array $whereData = [],
         array $select = ['*'],
         $orderBy = 'id desc',
-        $perpage = 10
+        $perpage = self::LIMIT
     ) {
         return $this->model
             ->where($whereData)
