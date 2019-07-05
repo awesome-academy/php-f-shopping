@@ -1,0 +1,11 @@
+<script src="{{ asset('frontend/lib/jquery/jquery.js') }}?{{ time() }}"></script>
+<script src="{{ asset('frontend/lib/jquery/jquery-ui.min.js') }}?{{ time() }}"></script>
+<script src="{{ asset('frontend/lib/bootstrap/js/bootstrap.min.js') }}?{{ time() }}"></script>
+<script src="{{ asset('frontend/lib/textillate/jquery.textillate.js') }}?{{ time() }}"></script>
+<script src="{{ asset('frontend/lib/textillate/jquery.fittext.js') }}?{{ time() }}"></script>
+<script src="{{ asset('frontend/lib/textillate/jquery.lettering.js') }}?{{ time() }}"></script>
+<script src="{{ asset('frontend/lib/OwlCarousel2-2.3.4/owl.carousel.min.js') }}?{{ time() }}"></script>
+<script src="{{ asset('frontend/lib/matchHeight/0.7.2/jquery.matchHeight.js') }}?{{ time() }}"></script>
+<script src="{{ asset('frontend/lib/select2/select2.min.js') }}?{{ time() }}"></script>
+<script src="{{ asset('frontend/lib/typeahead/typeahead.js') }}?{{ time() }}"></script> 
+<script src="{{ mix('js/main.js') }}?{{ time() }}"></script>

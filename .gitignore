@@ -2,6 +2,10 @@ vendor/
 node_modules/
 npm-debug.log
 .vscode
+public/frontend/
+public/upload
+public/js/main.js
+public/css/main.css
 
 # Laravel 4 specific
 bootstrap/compiled.php
@@ -19,3 +23,4 @@ Homestead.json
 
 # Rocketeer PHP task runner and deployment package. https://github.com/rocketeers/rocketeer
 .rocketeer/
+package-lock.json
