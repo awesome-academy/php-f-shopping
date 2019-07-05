@@ -11,5 +11,23 @@ let mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/assets/js/app.js', 'public/js')
-   .sass('resources/assets/sass/app.scss', 'public/css');
+mix.styles([
+	'public/frontend/font/font.css',
+	'public/frontend/css/base.css',
+	'public/frontend/css/home/about.css',
+	'public/frontend/css/home/banner.css',
+	'public/frontend/css/home/footer.css',
+	'public/frontend/css/home/header.css',
+	'public/frontend/css/home/product.css',
+	'public/frontend/css/home/productSelling.css',
+	'public/frontend/css/home/recipe.css',
+	'public/frontend/css/home/slide.css',
+	], 'public/css/main.css')
+   .js([
+   	'public/frontend/js/common/common.js',
+   	'public/frontend/js/product/productSelling.js',
+   	'public/frontend/js/slide/slide.js',
+   	], 'public/js/main.js')
+    .options({
+      processCssUrls: false
+    });
